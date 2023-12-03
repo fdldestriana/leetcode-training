@@ -1,0 +1,22 @@
+Given an array nums. We define a running sum of an array as
+runningSum[i] = sum(nums[0]…nums[i]).
+Return the running sum of nums.
+example
+Input: nums = [3,1,2,10,1]
+Output: [3,4,6,16,17]
+
+Solution:
+class Solution {
+    fun runningSum(nums: IntArray): IntArray {
+        var newCollections: IntArray = IntArray(nums.size)
+        var newNumberMember: Int = 0
+        for (i in nums.indices) {
+            newNumberMember = newNumberMember + nums[i]
+            newCollections[i] = newNumberMember
+        }
+        return newCollections
+    }
+}
+
+Peer solution:
+-
