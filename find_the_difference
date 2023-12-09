@@ -10,6 +10,15 @@ Example 2:
 Input: s = "", t = "y"
 Output: "y"
 
+Solution by reading peer solution:
+class Solution {
+    fun findTheDifference(s: String, t: String): Char {
+        var char: Char
+        char = ( t.sumOf{it.toInt()} - s.sumOf{it.toInt()} ).toChar()
+        return char
+    }
+}
+
 Peer solution:
 class Solution {
     fun findTheDifference(s: String, t: String) = 
